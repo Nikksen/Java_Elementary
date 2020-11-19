@@ -17,7 +17,7 @@ public class MeasureTheTemperature {
             res += number % 10;
             number /= 10;
         }
-        System.out.println(res);
+        System.out.println("Сумма цифр введёных в числе = "+res);
 
     }
 
