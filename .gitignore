@@ -1,6 +1,3 @@
 *.iml
 out/
 .idea/
-
-#Maven
-target/classes
