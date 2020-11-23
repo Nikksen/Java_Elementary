@@ -3,4 +3,4 @@ out/
 .idea/
 
 #Maven
-target/*
+target/classes
