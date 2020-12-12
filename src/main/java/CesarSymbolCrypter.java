@@ -1,7 +1,7 @@
 public class CesarSymbolCrypter implements SybbolCrypter {
     private int key;
 
-    public CesarSymbolCrypter(int key){
+    public CesarSymbolCrypter(int key) {
         this.key = key;
     }
 
@@ -23,5 +23,12 @@ public class CesarSymbolCrypter implements SybbolCrypter {
             int newNumber = (int) c - key;
             return (char) newNumber;
         }
+
+
+    }
+
+    @Override
+    public String getName() {
+        return "Получили шифр Цезаря";
     }
 }

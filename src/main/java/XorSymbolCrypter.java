@@ -16,4 +16,11 @@ public class XorSymbolCrypter implements SybbolCrypter {
         c = (char) ((key ^ c));
         return c;
     }
+
+    @Override
+    public String getName() {
+        return "Получили шифр XOR";
+    }
+
+
 }
