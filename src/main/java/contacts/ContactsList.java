@@ -1,3 +1,5 @@
+package contacts;
+
 import java.util.Arrays;
 
 public class ContactsList {

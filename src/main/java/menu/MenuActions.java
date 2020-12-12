@@ -1,8 +1,12 @@
+package menu;
+
 public interface MenuActions {
 
     void doAction();
 
     String getName();
 
-    boolean closeAfter();
+    default boolean closeAfter(){
+        return false;
+    }
 }

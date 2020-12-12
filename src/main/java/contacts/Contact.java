@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package contacts;
 
 public class Contact {
     private String name;
@@ -21,7 +21,7 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact{" +
+        return "contacts.Contact{" +
                 "name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 '}';

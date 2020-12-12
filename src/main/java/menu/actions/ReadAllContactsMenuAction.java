@@ -1,3 +1,7 @@
+package menu.actions;
+
+import menu.MenuActions;
+
 public class ReadAllContactsMenuAction implements MenuActions {
     @Override
     public void doAction() {

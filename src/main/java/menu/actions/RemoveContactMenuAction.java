@@ -1,3 +1,7 @@
+package menu.actions;
+
+import menu.MenuActions;
+
 public class RemoveContactMenuAction implements MenuActions {
 
     @Override

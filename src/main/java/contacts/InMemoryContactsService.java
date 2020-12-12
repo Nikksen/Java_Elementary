@@ -1,18 +1,25 @@
+package contacts;
+
+import contacts.Contact;
+import contacts.ContactsList;
+
+
 public class InMemoryContactsService implements ContactsService {
-    ContactsList contactsList = new ContactsList();
+
+    private final ContactsList contacts = new ContactsList();
 
     @Override
     public ContactsList getAll() {
-        return contactsList.getAll();
+        return contacts;
     }
 
     @Override
     public void remove(int index) {
-        contactsList.remove(index);
+        contacts.remove(index);
     }
 
     @Override
     public void add(Contact contact) {
-        contactsList.add(contact);
+        contacts.add(contact);
     }
 }
