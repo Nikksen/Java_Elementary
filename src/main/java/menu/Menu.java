@@ -45,7 +45,7 @@ public class Menu {
 
     private void showMenu() {
         for (int i = 0; i < actions.length; i++) {
-            System.out.printf("%d - $s\n", i + 1, actions[i].getName());
+            System.out.printf("%d - %s\n", i + 1, actions[i].getName());
         }
     }
 }

@@ -1,8 +1,5 @@
 package contacts;
 
-import contacts.Contact;
-import contacts.ContactsList;
-
 
 public class InMemoryContactsService implements ContactsService {
 
@@ -14,8 +11,9 @@ public class InMemoryContactsService implements ContactsService {
     }
 
     @Override
-    public void remove(int index) {
+    public ContactsList remove(int index) {
         contacts.remove(index);
+        return contacts.getAll();
     }
 
     @Override

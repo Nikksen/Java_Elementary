@@ -19,11 +19,13 @@ public class ContactsList {
     }
 
     public void remove(int index) {
-        Contact[] buffer = new Contact[contacts.length - 1];
-        for (int i = 0; i < contacts.length; i++) {
-            buffer[i] = contacts[i < index ? i : i + 1];
-        }
+        Contact[] contactsNew = contacts; // получили ссылку на наш массив
+        Contact[] buffer = new Contact[contactsNew.length - 1]; // создаем новый массив
+        System.arraycopy(contactsNew, 0, buffer, 0, index); // копируем ДО нашего элемент
+        int countResult = contactsNew.length - 1 - index;
+        System.arraycopy(contactsNew, index + 1, buffer, index, countResult);
         contacts = buffer;
+        count--;
     }
 
     public void add(Contact contact) {
