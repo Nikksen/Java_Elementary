@@ -1,6 +1,4 @@
 package menu.actions;
-
-import contacts.Contact;
 import contacts.ContactsList;
 import contacts.ContactsService;
 import menu.MenuActions;
