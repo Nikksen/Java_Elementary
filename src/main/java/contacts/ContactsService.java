@@ -7,4 +7,8 @@ public interface ContactsService {
 
     void add(Contact contact);
 
+    String getContactWithName(String searchName);
+
+    String getContactWithPhone(String phone);
+
 }
