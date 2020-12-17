@@ -1,6 +1,8 @@
 package contacts;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ContactsList {
     Contact[] contacts = new Contact[10];
@@ -36,6 +38,16 @@ public class ContactsList {
             contacts[contacts.length - 1] = contact;
         }
         count++;
+    }
+
+    @Override
+    public String toString() {
+        List<String> strings =new ArrayList<>();
+        for(int i = 0 ; i < count; i++) {
+            Contact contact = getContact(i);
+            strings.add(contact.getName()+  " -> " +contact.getPhone());
+        }
+        return "Contacts= " + strings.toString();
     }
 
     public ContactsList getAll(){

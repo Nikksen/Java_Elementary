@@ -22,22 +22,24 @@ public class InMemoryContactsService implements ContactsService {
     }
 
     @Override
-    public String getContactWithName(String searchName) {
+    public ContactsList getContactWithName(String searchName) {
+       ContactsList contactsListByName = new ContactsList();
         for (int i = 0; i < contactsList.size() ; i++) {
-            if (contactsList.contacts[i].getName().startsWith(searchName)){
-                System.out.println(contactsList.contacts[i].getName() + " " + contactsList.contacts[i].getPhone());
+            if (contactsList.getContact(i).getName().startsWith(searchName)){
+                contactsListByName.add(contactsList.getContact(i));
             }
         }
-        return "Все что нашли -_-";
+        return contactsListByName;
     }
 
     @Override
-    public String getContactWithPhone(String phone) {
+    public ContactsList getContactWithPhone(String phone) {
+        ContactsList contactsListByPhone = new ContactsList();
         for (int i = 0; i < contactsList.size(); i++) {
-            if (contactsList.contacts[i].getPhone().contains(phone)){
-                System.out.println(contactsList.contacts[i].getPhone() + " " + contactsList.contacts[i].getName());
+            if (contactsList.getContact(i).getPhone().contains(phone)){
+                contactsListByPhone.add(contactsList.getContact(i));
             }
         }
-        return "Все что нашли -_-";
+        return contactsListByPhone;
     }
 }
