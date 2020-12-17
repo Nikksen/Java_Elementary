@@ -42,16 +42,16 @@ public class ContactsList {
 
     @Override
     public String toString() {
-        List<String> strings =new ArrayList<>();
-        for(int i = 0 ; i < count; i++) {
+        List<String> strings = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
             Contact contact = getContact(i);
-            strings.add(contact.getName()+  " -> " +contact.getPhone());
+            strings.add(contact.getName() + " -> " + contact.getPhone());
         }
         return "Contacts= " + strings.toString();
     }
 
-    public ContactsList getAll(){
-        for (Contact c : contacts){
+    public ContactsList getAll() {
+        for (Contact c : contacts) {
             System.out.println(c);
         }
         return null;
