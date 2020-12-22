@@ -1,26 +1,16 @@
-import contacts.Contact;
-import contacts.ContactsService;
-import contacts.InMemoryContactsService;
-import menu.Menu;
-import menu.actions.*;
+import Users.User;
+import Users.UserParser;
 
-import java.util.Scanner;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        ContactsService contactsService = new InMemoryContactsService();
-        contactsService.add(new Contact("Nikita","+380957748592"));
-        contactsService.add(new Contact("Nikita","+380967564532"));
-        contactsService.add(new Contact("Yakov","+380637564563"));
-        Menu menu = new Menu(sc);
-        menu.addAction(new ReadAllContactsMenuAction(contactsService));
-        menu.addAction(new AddContactMenuAction(contactsService,sc));
-        menu.addAction(new ExitMenuAction());
-        menu.addAction(new RemoveContactMenuAction(contactsService,sc));
-        menu.addAction(new FindPhoneMenuAction(contactsService));
-        menu.addAction(new FindNameMenuAction(contactsService));
-        menu.run();
+
+        String stringWithNames = "programmer:vasia@123,programmer:vasia,vasia@1234,vasia,vasia:@trulala";
+        List<User> users ;
+        UserParser userParser = new UserParser();
+        users = userParser.parse(stringWithNames);
+        userParser.getUsersList(users);
     }
 }
